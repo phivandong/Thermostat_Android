@@ -6,13 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Timer extends AppCompatActivity {
-    private FloatingActionButton addTimerBtn;
-    private Toolbar toolbar;
     ImageView ivTimer1;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +21,7 @@ public class Timer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Timer.this, PickTime.class));
-                //replaceFragment(new PickTimeFragment());
             }
         });
     }
-
-//    private void replaceFragment(Fragment fragment) {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.frameLayout, fragment);
-//        fragmentTransaction.commit();
-//    }
 }

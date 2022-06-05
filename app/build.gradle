@@ -49,4 +49,9 @@ dependencies {
     implementation 'me.itangqi.waveloadingview:library:0.3.5'
     implementation 'jp.hamcheesedev:outlinedtextview:0.1.0'
     implementation 'com.github.travijuu:numberpicker:1.0.7'
+    implementation 'org.mongodb:mongo-java-driver:3.0.3'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
+    implementation('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
+        exclude module: 'support-v4'
+    }
 }

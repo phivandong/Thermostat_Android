@@ -8,8 +8,6 @@
     xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
     tools:context=".RoomOption">
 
-    tools:context=".RoomOption">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -331,7 +329,7 @@
 
                                 <LinearLayout
                                     android:visibility="gone"
-                                    android:id="@+id/power_off"
+                                    android:id="@+id/powerOff"
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:orientation="vertical"
@@ -346,7 +344,7 @@
                                 </LinearLayout>
                                 <LinearLayout
                                     android:visibility="visible"
-                                    android:id="@+id/power_on"
+                                    android:id="@+id/powerOn"
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:orientation="vertical"
@@ -354,10 +352,8 @@
                                     android:gravity="center">
 
                                     <ImageView
-                                        android:id="@+id/ivPower"
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:clickable="true"
                                         android:src="@drawable/power_on" />
 
                                 </LinearLayout>
@@ -408,10 +404,8 @@
                                     android:gravity="center">
 
                                     <ImageView
-                                        android:id="@+id/ivBluetooth"
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:clickable="true"
                                         android:src="@drawable/ic_sensor" />
 
                                 </LinearLayout>
@@ -469,39 +463,15 @@
                                     <ImageView
                                         android:layout_width="80dp"
                                         android:layout_height="80dp"
-                                        android:src="@drawable/thermometer"
-                                        android:layout_marginBottom="30dp"/>
-
-<!--                                    <TextView-->
-<!--                                        android:layout_width="wrap_content"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        android:text="Light Bulb"-->
-<!--                                        android:fontFamily="@font/raleway"-->
-<!--                                        android:textSize="17dp"-->
-<!--                                        android:textColor="#000000"-->
-<!--                                        android:layout_marginTop="15dp" />-->
-
-<!--                                    <TextView-->
-<!--                                        android:id="@+id/light_text"-->
-<!--                                        android:layout_width="match_parent"-->
-<!--                                        android:layout_height="wrap_content"-->
-<!--                                        android:text="OFF"-->
-<!--                                        android:textSize="14dp"-->
-<!--                                        android:textColor="@color/colorAccent"-->
-<!--                                        android:gravity="center"-->
-<!--                                        android:layout_marginTop="5dp" />-->
+                                        android:layout_marginBottom="30dp"
+                                        android:src="@drawable/thermometer" />
 
                                     <com.travijuu.numberpicker.library.NumberPicker
                                         android:id="@+id/number_picker"
                                         android:layout_width="130dp"
                                         android:layout_height="40dp"
-                                        numberpicker:focusable="false"
-                                        numberpicker:max="10"
-                                        numberpicker:min="0"
-                                        numberpicker:unit="1"
-                                        numberpicker:value="-5"
-                                         />
-<!--numberpicker:custom_layout="@layout/number_picker_custom_layout"-->
+                                        numberpicker:focusable="false" />
+
                                 </LinearLayout>
 
                             </androidx.cardview.widget.CardView>
@@ -592,7 +562,7 @@
                                         </LinearLayout>
 
                                         <jp.hamcheesedev.outlinedtextview.CompatOutlinedTextView
-                                            android:id="@+id/fan_speed"
+                                            android:id="@+id/fanSpeed"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="0%"
@@ -604,7 +574,7 @@
                                             app:strokeWidth="2dp"/>
 
                                         <com.suke.widget.SwitchButton
-                                            android:id="@+id/switch_fan"
+                                            android:id="@+id/switchFan"
                                             android:layout_width="70dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="15dp"/>
@@ -648,12 +618,6 @@
                                     android:orientation="vertical"
                                     android:padding="10dp">
 
-                                    <!--                                    <ImageView-->
-                                    <!--                                        android:layout_width="40dp"-->
-                                    <!--                                        android:layout_height="40dp"-->
-                                    <!--                                        android:src="@drawable/ic_router"-->
-                                    <!--                                        />-->
-
                                     <TextView
                                         android:id="@+id/tvTimer"
                                         android:layout_width="wrap_content"
@@ -663,23 +627,6 @@
                                         android:text="Timer"
                                         android:textColor="#000000"
                                         android:textSize="17dp" />
-
-                                    <!--                                    <TextView-->
-                                    <!--                                        android:id="@+id/wifi_text"-->
-                                    <!--                                        android:layout_width="match_parent"-->
-                                    <!--                                        android:layout_height="wrap_content"-->
-                                    <!--                                        android:text="OFF"-->
-                                    <!--                                        android:textSize="14dp"-->
-                                    <!--                                        android:textColor="@color/colorAccent"-->
-                                    <!--                                        android:gravity="center"-->
-                                    <!--                                        android:layout_marginTop="5dp"-->
-                                    <!--                                        />-->
-
-                                    <!--                                    <com.suke.widget.SwitchButton-->
-                                    <!--                                        android:id="@+id/switch_wifi"-->
-                                    <!--                                        android:layout_width="70dp"-->
-                                    <!--                                        android:layout_height="wrap_content"-->
-                                    <!--                                        android:layout_marginTop="10dp"/>-->
 
                                 </LinearLayout>
 
@@ -740,7 +687,7 @@
                                         />
 
                                     <com.suke.widget.SwitchButton
-                                        android:id="@+id/switch_tv"
+                                        android:id="@+id/switchHumidity"
                                         android:layout_width="70dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"/>
@@ -762,8 +709,6 @@
         </ScrollView>
 
     </LinearLayout>
-
-
 
     <!--    Menu list item-->
 
