@@ -66,9 +66,9 @@ public class Config extends AppCompatActivity {
                             @Override
                             public void onSuccess(IMqttToken asyncActionToken) {
                                 // We are connected
-                                String data= etSendMsg.getText().toString();
-                                String topic_pub= etTopicPub.getText().toString();
-                                send(data, topic_pub);
+                                String data = etSendMsg.getText().toString();
+                                String topicPub = etTopicPub.getText().toString();
+                                send(data, topicPub);
                             }
                             @Override
                             public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
@@ -95,8 +95,8 @@ public class Config extends AppCompatActivity {
                         @Override
                         public void onSuccess(IMqttToken asyncActionToken) {
                             // We are connected
-                            String topic_sub= etTopicSub.getText().toString();
-                            get(topic_sub);
+                            String topicSub= etTopicSub.getText().toString();
+                            get(topicSub);
                         }
                         @Override
                         public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
@@ -122,7 +122,7 @@ public class Config extends AppCompatActivity {
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
                 tvStatus.setText("Status: Connected");
-                data += String.valueOf(message)+ "\n";
+                data += String.valueOf(message) + "\n";
                 tvGetMsg.setText(data);
             }
 

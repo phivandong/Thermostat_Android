@@ -9,6 +9,7 @@ android {
     defaultConfig {
         applicationId "com.pvdong.smart_thermostat"
         minSdk 19
+        multiDexEnabled true
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -33,6 +34,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -49,7 +51,6 @@ dependencies {
     implementation 'me.itangqi.waveloadingview:library:0.3.5'
     implementation 'jp.hamcheesedev:outlinedtextview:0.1.0'
     implementation 'com.github.travijuu:numberpicker:1.0.7'
-    implementation 'org.mongodb:mongo-java-driver:3.0.3'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
     implementation('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
         exclude module: 'support-v4'

@@ -99,4 +99,7 @@ public class FanSpeed extends androidx.fragment.app.DialogFragment {
         return view;
     }
 
+    public String getSpeedValue() {
+        return speedValue;
+    }
 }
